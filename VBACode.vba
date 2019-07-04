@@ -16,6 +16,7 @@ Sub FillImage()
     Call FillBlack(imageWidth, imageHeight)
     
     Count = 0
+    Application.ScreenUpdating = False
     For dataY = 1 To UBound(data, 1)
         For dataX = 1 To UBound(data, 2)
             If Int(data(dataY, dataX)) > 0 Then
@@ -29,6 +30,7 @@ Sub FillImage()
         Next dataX
         DoEvents
     Next dataY
+    Application.ScreenUpdating = True
 End Sub
 
 Sub FillVideo()
@@ -43,6 +45,7 @@ Sub FillVideo()
     frameHeight = meta(1, 2)
     Sheets("Canvas").Activate
     For frame = 1 To UBound(data, 1)
+        Application.ScreenUpdating = False
         For diff = 1 To UBound(data, 2) Step 2
             pos = data(frame, diff)
             If pos = "" Then
@@ -50,6 +53,7 @@ Sub FillVideo()
             End If
             Cells(Int(pos / frameWidth) + 1, (pos Mod frameWidth) + 1).Interior.color = data(frame, diff + 1)
         Next diff
+        Application.ScreenUpdating = True
         DoEvents
     Next frame
 End Sub

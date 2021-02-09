@@ -42,4 +42,4 @@ Single images can also be displayed using `Image2CSV.py` to generate the `.csv` 
 
 ## Credit
 
-I downloaded the video file that I used in the example from [here](https://www.youtube.com/watch?v=7IUPQOQi1uc). I don't know if this is the original source.
+The example project includes video assets taken from [8 Bit Chika Fujiwara Dance](https://www.youtube.com/watch?v=7IUPQOQi1uc), which is adapted from the [Original rotoscope](https://www.youtube.com/watch?v=gVtuD_6xSrM).
